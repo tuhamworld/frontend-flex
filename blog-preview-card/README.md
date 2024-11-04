@@ -9,4 +9,5 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshots/screenshots-big.jpeg)
+![](./screenshots/mobile-view.jpeg)
 

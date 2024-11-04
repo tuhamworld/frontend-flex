@@ -86,9 +86,13 @@ font-size: 0.8rem;
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 414px) {
+ 
     .main-container {
-        width: 600px;
-        margin: auto;
+        max-width: 100%;
+        width: 300px !important;
+        margin: 0 40px 0 0;
+
+  
     }
 }
