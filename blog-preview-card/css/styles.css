@@ -8,18 +8,15 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    padding: 0;
+    margin: 0;
 
 }
 
 .main-container{
     background-color: #fff;
     padding: 20px;
-    max-width: 45%;
+    max-width: 100%;
     width: 19rem;
     height: 26rem;
     display: flex;
@@ -28,6 +25,7 @@ body {
     border: solid 1px #000;
     border-radius: 10px;
     box-shadow: 10px 10px hsl(0, 0%, 7%);
+    margin: 5rem auto;
 }
 
 .main-container .main-container__inner-top .article-illustration{
