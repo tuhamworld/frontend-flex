@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", serif;
+  background-color: hsl(0, 0%, 98%);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+.container .upper__container {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container .upper__container {
+    padding: 10px;
+  }
+}
+.container .upper__container .title {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 200;
+}
+@media (max-width: 768px) {
+  .container .upper__container .title {
+    font-size: 1.4rem;
+  }
+}
+.container .upper__container .subtitle {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .container .upper__container .subtitle {
+    font-size: 1.4rem;
+  }
+}
+.container .upper__container .description {
+  margin: 15px 0 0 0;
+  font-weight: 200;
+  font-size: 1.1rem;
+}
+@media (max-width: 768px) {
+  .container .upper__container .description {
+    font-size: 1rem;
+  }
+}
+.container .lower__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .container .lower__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.container .lower__container .content__box {
+  width: 18rem;
+  height: 12rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .container .lower__container .content__box {
+    width: 15rem;
+    height: 9rem;
+  }
+}
+.container .lower__container .content__box .last-item {
+  align-self: flex-end;
+  position: absolute;
+  bottom: 1rem;
+}
+.container .lower__container .content__box .box__title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .container .lower__container .content__box .box__title {
+    font-size: 0.8rem;
+  }
+}
+.container .lower__container .content__box .box__description {
+  font-weight: 200;
+}
+@media (max-width: 768px) {
+  .container .lower__container .content__box .box__description {
+    font-size: 0.8rem;
+  }
+}
+.container .lower__container .supervisor {
+  border-top: solid 5px hsl(180, 62%, 55%);
+  grid-column: 1;
+  grid-row: 1/span 2;
+}
+.container .lower__container .team__builder {
+  border-top: solid 5px hsl(0, 78%, 62%);
+  grid-column: 2;
+  grid-row: 1;
+}
+.container .lower__container .karma {
+  border-top: solid 5px hsl(34, 97%, 64%);
+  grid-column: 2;
+  grid-row: 2;
+}
+.container .lower__container .calculator {
+  border-top: solid 5px hsl(212, 86%, 64%);
+  grid-column: 3;
+  grid-row: 1/span 2;
+}
+
+/*# sourceMappingURL=styles.css.map */
