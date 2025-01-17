@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  body {
+    width: auto;
+    height: auto;
+  }
+}
+
+.main-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  width: 85%;
+  max-width: 1440px;
+}
+@media (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem;
+  }
+}
+.main-container .testimonial__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 10px;
+}
+.main-container .testimonial__container .meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-container .testimonial__container .meta .meta__author {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", serif;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.main-container .testimonial__container .meta .meta__image img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: solid 1px hsl(0, 0%, 100%);
+}
+.main-container .testimonial__container .meta .meta__author h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.main-container .testimonial__container .meta .meta__author h3 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0;
+}
+.main-container .testimonial__container h4.meta__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.main-container .testimonial__container p.meta_description {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+.main-container .daniel {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+  grid-column: span 2;
+  background-image: url("../assets/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 50px;
+}
+.main-container .jonathan {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+  grid-column: span 1;
+}
+.main-container .jeanette {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+  grid-column: span 1;
+}
+.main-container .patrick {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+  grid-column: span 2;
+}
+.main-container .kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+  grid-column: 4;
+  grid-row: 1/span 2;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,83 @@
+@use "./variables" as vars;
+@use "./typography" as typo;
+
+body {
+  background-color: vars.$light-grayish-blue;
+  font-family: typo.$font-family;
+  margin: 0;
+  padding: 0;
+  font-size: typo.$body-font-size;
+}
+
+.main-container {
+  .testimonial__container {
+    & .meta {
+      & .meta__image img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: solid 1px vars.$white;
+      }
+
+      & .meta__author {
+        & h2 {
+          font-size: 1rem;
+          font-weight: typo.$font-weight-600;
+          margin: 0;
+        }
+
+        & h3 {
+          font-size: 0.9rem;
+          font-weight: typo.$font-weight-300;
+          margin: 0;
+        }
+      }
+    }
+
+    & h4.meta__title {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: typo.$font-weight-500;
+    }
+
+    & p.meta_description {
+      margin: 0;
+      font-weight: typo.$font-weight-400;
+      line-height: 1.3rem;
+    }
+  }
+
+  & .daniel {
+    background-color: vars.$moderate-violet;
+    color: vars.$white;
+    grid-column: span 2;
+    background-image: url("../assets/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 50px;
+  }
+
+  & .jonathan {
+    background-color: vars.$very-dark-grayish-blue;
+    color: vars.$white;
+    grid-column: span 1;
+  }
+
+  & .jeanette {
+    background-color: vars.$white;
+    color: vars.$very-dark-grayish-blue;
+    grid-column: span 1;
+  }
+
+  & .patrick {
+    background-color: vars.$very-dark-blackish-blue;
+    color: vars.$white;
+    grid-column: span 2;
+  }
+
+  & .kira {
+    background-color: vars.$white;
+    color: vars.$very-dark-grayish-blue;
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+}

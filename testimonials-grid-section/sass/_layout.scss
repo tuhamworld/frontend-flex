@@ -1,0 +1,51 @@
+@use "./variables" as vars;
+@use "./typography" as typo;
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  @media (max-width: 768px) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.main-container {
+  display: grid; // we'll change to grid later
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  // margin: 2rem auto;
+  width: 85%;
+  max-width: vars.$desktop;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem;
+  }
+
+  .testimonial__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+
+    & .meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & .meta__author {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  }
+}
