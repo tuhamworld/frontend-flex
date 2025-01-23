@@ -1,0 +1,132 @@
+@use "./variables" as vars;
+
+:root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    width: auto;
+    height: auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+main.container {
+  display: flex;
+  gap: 1rem;
+  max-width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  & .main__lhs {
+    width: 100%;
+    & .drawer_mobile {
+      display: none;
+    }
+    & img {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      border-radius: 10px 0px 0px 10px;
+      @media (max-width: 768px) {
+        border-radius: 10px 10px 0px 0px;
+
+        & .drawer_mobile {
+          display: block;
+        }
+
+        & .drawer_desktop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  & .main__rhs {
+    display: flex;
+    flex-direction: column;
+    // padding: 2rem;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+    
+    }
+
+    & .rhs-meta__share {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .meta {
+        display: flex;
+        gap: 0.9rem;
+
+        & .meta__contents {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          & .meta__author {
+            margin: 0;
+          }
+
+          & .meta__date {
+            margin: 0;
+          }
+        }
+      }
+
+      & .share__container {
+        position: relative;
+
+        & .share-icon__box {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        & .desktop-share-popup-box {
+          position: absolute;
+          // display: flex;
+          gap: 2rem;
+          align-items: center;
+          border-radius: 10px;
+          bottom: 4.5rem;
+          left: -7rem;
+
+
+          & .share__icons {
+            display: flex;
+            gap: 20px;
+          }
+        }
+
+        .desktop-share-popup-box::after {
+          content: "";
+          position: absolute;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 30px solid vars.$very-dark-grayish-blue;
+          bottom: -20px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

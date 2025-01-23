@@ -1,0 +1,137 @@
+@use "./typography" as typo;
+@use "./variables" as vars;
+
+body {
+  font-size: 13px;
+  font-family: vars.$font-family;
+  background-color: vars.$light-grayish-blue;
+}
+
+main.container {
+  margin: 0 10rem;
+  background-color: vars.$white;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    margin: 4rem 2rem;
+  }
+
+  & .main__rhs {
+    & .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 2rem 2rem 0rem 2rem;
+      @media (max-width: 768px) {
+        margin: 0rem 2rem 0rem 2rem;
+      }
+    }
+    & .rhs__title {
+      font-size: 1.6rem;
+      font-weight: vars.$weight-heavy;
+      margin: 0;
+      line-height: 2rem;
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    & .rhs__description {
+      margin: 0;
+      font-size: 1.1rem;
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    & .rhs-meta__share {
+      margin: 0rem 2rem;
+      @media (max-width: 768px) {
+        // display: none !important; // This is to hide the meta share once the share button is clicked
+      }
+
+      & .meta {
+        & .author__icon {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+        }
+      }
+
+      & .share__container {
+        & .share-icon__box {
+          width: 50px;
+          height: 50px;
+          background-color: vars.$light-grayish-blue;
+          border-radius: 50%;
+          cursor: pointer;
+
+          & .share-icon {
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+        }
+
+        & .desktop-share-popup-box {
+          background-color: vars.$very-dark-grayish-blue;
+          padding: 0.9rem 2.2rem;
+          @media (max-width: 768px) {
+            display: none;
+          }
+
+          & .share__text {
+            color: vars.$white;
+            font-weight: 100;
+            letter-spacing: 5px;
+          }
+
+          & .share__icons {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  & .share_box-for-mobile {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    & .mobile-share-popup-box {
+      background-color: vars.$very-dark-grayish-blue;
+      padding: 0.9rem 2.2rem;
+      // position: absolute;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      border-radius: 10px;
+
+      & .share__text {
+        color: vars.$white;
+        font-weight: 100;
+        letter-spacing: 5px;
+      }
+
+      & .share__icons {
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+      }
+
+      & .share-icon__box-white {
+        background-color: vars.$grayish-blue;
+        width: auto;
+        padding: 0.4rem;
+        height: auto;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+      }
+    }
+  }
+}

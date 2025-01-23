@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../assets/fonts/Manrope-VariableFont_wght.ttf");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+
+main.container {
+  margin: 0 10rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  main.container {
+    margin: 4rem 2rem;
+  }
+}
+main.container .main__rhs .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 2rem 0rem 2rem;
+}
+@media (max-width: 768px) {
+  main.container .main__rhs .content {
+    margin: 0rem 2rem 0rem 2rem;
+  }
+}
+main.container .main__rhs .rhs__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 2rem;
+}
+@media (max-width: 768px) {
+  main.container .main__rhs .rhs__title {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+}
+main.container .main__rhs .rhs__description {
+  margin: 0;
+  font-size: 1.1rem;
+}
+@media (max-width: 768px) {
+  main.container .main__rhs .rhs__description {
+    font-size: 1rem;
+  }
+}
+main.container .main__rhs .rhs-meta__share {
+  margin: 0rem 2rem;
+}
+main.container .main__rhs .rhs-meta__share .meta .author__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+main.container .main__rhs .rhs-meta__share .share__container .share-icon__box {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+main.container .main__rhs .rhs-meta__share .share__container .share-icon__box .share-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+main.container .main__rhs .rhs-meta__share .share__container .desktop-share-popup-box {
+  background-color: hsl(217, 19%, 35%);
+  padding: 0.9rem 2.2rem;
+}
+@media (max-width: 768px) {
+  main.container .main__rhs .rhs-meta__share .share__container .desktop-share-popup-box {
+    display: none;
+  }
+}
+main.container .main__rhs .rhs-meta__share .share__container .desktop-share-popup-box .share__text {
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+main.container .main__rhs .rhs-meta__share .share__container .desktop-share-popup-box .share__icons {
+  cursor: pointer;
+}
+main.container .share_box-for-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  main.container .share_box-for-mobile {
+    display: block;
+  }
+}
+main.container .share_box-for-mobile .mobile-share-popup-box {
+  background-color: hsl(217, 19%, 35%);
+  padding: 0.9rem 2.2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border-radius: 10px;
+}
+main.container .share_box-for-mobile .mobile-share-popup-box .share__text {
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+main.container .share_box-for-mobile .mobile-share-popup-box .share__icons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+main.container .share_box-for-mobile .mobile-share-popup-box .share-icon__box-white {
+  background-color: hsl(212, 23%, 69%);
+  width: auto;
+  padding: 0.4rem;
+  height: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+:root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  :root {
+    width: auto;
+    height: auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+}
+
+main.container {
+  display: flex;
+  gap: 1rem;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  main.container {
+    flex-direction: column;
+  }
+}
+main.container .main__lhs {
+  width: 100%;
+}
+main.container .main__lhs .drawer_mobile {
+  display: none;
+}
+main.container .main__lhs img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+@media (max-width: 768px) {
+  main.container .main__lhs img {
+    border-radius: 10px 10px 0px 0px;
+  }
+  main.container .main__lhs img .drawer_mobile {
+    display: block;
+  }
+  main.container .main__lhs img .drawer_desktop {
+    display: none;
+  }
+}
+main.container .main__rhs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main.container .main__rhs .rhs-meta__share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main.container .main__rhs .rhs-meta__share .meta {
+  display: flex;
+  gap: 0.9rem;
+}
+main.container .main__rhs .rhs-meta__share .meta .meta__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main.container .main__rhs .rhs-meta__share .meta .meta__contents .meta__author {
+  margin: 0;
+}
+main.container .main__rhs .rhs-meta__share .meta .meta__contents .meta__date {
+  margin: 0;
+}
+main.container .main__rhs .rhs-meta__share .share__container {
+  position: relative;
+}
+main.container .main__rhs .rhs-meta__share .share__container .share-icon__box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.container .main__rhs .rhs-meta__share .share__container .desktop-share-popup-box {
+  position: absolute;
+  gap: 2rem;
+  align-items: center;
+  border-radius: 10px;
+  bottom: 4.5rem;
+  left: -7rem;
+}
+main.container .main__rhs .rhs-meta__share .share__container .desktop-share-popup-box .share__icons {
+  display: flex;
+  gap: 20px;
+}
+main.container .main__rhs .rhs-meta__share .share__container .desktop-share-popup-box::after {
+  content: "";
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid hsl(217, 19%, 35%);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=main.css.map */
