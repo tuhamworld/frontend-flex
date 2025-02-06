@@ -18,19 +18,18 @@
 
   <main class="container">
     <div class="main__lhs">
-      <img src="./assets/images/drawers-desktop.jpg" alt="" class="drawer_desktop">
-      <img src="./assets/images/drawers-mobile.jpg" alt="" class="drawer_mobile">
+      <picture>
+        <img src="./assets/images/drawers-desktop.jpg" alt="furniture_drawer-desktop-view" class="drawer_desktop">
+        <img src="./assets/images/drawers-mobile.jpg" alt="furniture_drawer-mobile-view" class="drawer_mobile">
+      </picture>
 
     </div>
 
     <div class="main__rhs">
-
       <div class="content">
-
-
-
-        <h3 class="rhs__title"> Shift the overall look and feel by adding these wonderful touches to furniture in your
-          home</h3>
+        <h2 class="rhs__title">
+           Shift the overall look and feel by adding these wonderful touches to furniture in your home
+          </h2>
         <p class="rhs__description">Ever been in a room and felt like something was missing? Perhaps
           it felt slightly bare and uninviting. I've got some simple tips
           to help you make any room feel complete.</p>
@@ -40,15 +39,24 @@
       <!-- Entire Share icon box for mobile  starts here-->
       <div class="share_box-for-mobile">
 
-        <div class="mobile-share-popup-box">
-          <span class="share__text">SHARE</span>
-          <span class="share__icons">
-            <img src="./assets/icons/icon-facebook.svg" alt="facebook-icon">
-            <img src="./assets/icons/icon-twitter.svg" alt="twitter-icon">
-            <img src="./assets/icons/icon-pinterest.svg" alt="pinterest-icon">
+        <div class="mobile-share-popup-box social-icons_box" role="menu" aria-hidden="true">
+          <span class="share__text">share</span>
+          <div class="share__icons">
+            <a href="" onclick="shareonFacebook()" role="menuitem">
+              <img src="./assets/icons/icon-facebook.svg" alt="facebook-icon">
+            </a>
 
-          </span>
-          <div class="share-icon__box-white">
+            <a href="" onclick="shareOnTwitter()" role="menuitem">
+              <img src="./assets/icons/icon-twitter.svg" alt="twitter-icon">
+
+            </a>
+
+            <a href="" onclick="shareOnPinterest()" role="menuitem">
+              <img src="./assets/icons/icon-pinterest.svg" alt="pinterest-icon">
+            </a>
+
+          </div>
+          <div class="share-icon__box-white share_btn">
             <img src="./assets/icons/icon-share-white.svg" alt="" class="share-icon">
           </div>
         </div>
@@ -56,35 +64,50 @@
       <!-- Entire Share icon box for mobile  ends here-->
 
       <div class="rhs-meta__share">
-        <span class="meta">
+        <div class="meta">
 
-          <span>
+          <div>
             <img src="./assets/images/avatar-michelle.jpg" alt="" class="author__icon">
-          </span>
-          <span class="meta__contents">
-            <h4 class="meta__author">Michelle Appleton</h4>
+          </div>
+          <div class="meta__contents">
+            <p class="meta__author">Michelle Appleton</p>
             <p class="meta__date">28 Jun 2020</p>
-          </span>
+          </div>
 
-        </span>
+        </div>
 
         <!-- Entire desktop share layout starts here -->
         <div class="share__container">
 
           <!-- Toggle Share icons box for desktop starts here -->
-          <div class="desktop-share-popup-box">
-            <span class="share__text">SHARE</span>
-            <span class="share__icons">
-              <img src="./assets/icons/icon-facebook.svg" alt="facebook-icon">
-              <img src="./assets/icons/icon-twitter.svg" alt="twitter-icon">
-              <img src="./assets/icons/icon-pinterest.svg" alt="pinterest-icon">
-            </span>
+          <div class="desktop-share-popup-box social-icons_box" role="menu" aria-hidden="true">
+            <span class="share__text">share</span>
+            <div class="share__icons">
+
+              <a href="" onclick="shareOnFacebook()" role="menuitem">
+                <img src="./assets/icons/icon-facebook.svg" alt="facebook-icon">
+              </a>
+
+              <a href="" onclick="shareOnTwitter()" role="menuitem">
+                <img src="./assets/icons/icon-twitter.svg" alt="twitter-icon">
+              </a>
+
+              <a href="" onclick="shareOnPinterest()" role="menuitem">
+                <img src="./assets/icons/icon-pinterest.svg" alt="pinterest-icon">
+              </a>
+            </div>
           </div>
           <!-- Toggle Share icons box for desktop ends here -->
 
           <!-- Main Share icon starts here -->
 
-          <div class="share-icon__box">
+          <div class="share-icon__box share_btn"
+          role="button" 
+          tabindex="0" 
+          aria-label="Share this post" 
+          aria-expanded="false" 
+          aria-controls="social-icons_box"
+          >
             <img src="./assets/icons/icon-share.svg" alt="" class="share-icon">
           </div>
           <!-- Main Share icon ends here -->

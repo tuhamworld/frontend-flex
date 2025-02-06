@@ -27,7 +27,7 @@ main.container {
       }
     }
     & .rhs__title {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       font-weight: vars.$weight-heavy;
       margin: 0;
       line-height: 2rem;
@@ -39,7 +39,7 @@ main.container {
 
     & .rhs__description {
       margin: 0;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       @media (max-width: 768px) {
         font-size: 1rem;
       }
@@ -52,6 +52,12 @@ main.container {
       }
 
       & .meta {
+
+        & .meta__contents{
+          & .meta__author{
+            font-weight: 700;
+          }
+        }
         & .author__icon {
           width: 70px;
           height: 70px;
@@ -84,6 +90,7 @@ main.container {
             color: vars.$white;
             font-weight: 100;
             letter-spacing: 5px;
+            text-transform: uppercase;
           }
 
           & .share__icons {
@@ -100,6 +107,7 @@ main.container {
       display: block;
     }
 
+
     & .mobile-share-popup-box {
       background-color: vars.$very-dark-grayish-blue;
       padding: 0.9rem 2.2rem;
@@ -108,11 +116,16 @@ main.container {
       gap: 2rem;
       align-items: center;
       border-radius: 10px;
+      width: 100%;
+      @media (max-width: 321px) {
+        overflow: hidden;
+      }
 
       & .share__text {
         color: vars.$white;
         font-weight: 100;
         letter-spacing: 5px;
+        text-transform: uppercase;
       }
 
       & .share__icons {
