@@ -1,7 +1,6 @@
 function isMobileDevice() {
-    const maxWidth = 768; // Set the max width for mobile devices
-    return window.matchMedia(`(max-width: ${maxWidth}px)`).matches;
-
+  const maxWidth = 768; // Set the max width for mobile devices
+  return window.matchMedia(`(max-width: ${maxWidth}px)`).matches;
 }
 
 let mainShareIcon = document.querySelector(".share-icon__box");
@@ -9,7 +8,6 @@ let desktopShareBox = document.querySelector(".desktop-share-popup-box");
 let mobileShareBox = document.querySelector(".share_box-for-mobile");
 let metaShareContent = document.querySelector(".rhs-meta__share");
 let innerMobileShareIcon = document.querySelector(".share-icon__box-white");
-
 
 mobileShareBox.style.display = "none";
 desktopShareBox.style.display = "none";
@@ -26,10 +24,9 @@ mainShareIcon.addEventListener("click", function (event) {
       desktopShareBox.style.display === "flex" ? "none" : "flex";
   }
 
-// Prevent immediate closing when clicking the share icon itself
+  // Prevent immediate closing when clicking the share icon itself
   event.stopPropagation();
 });
-
 
 // Hiding share boxes when clicking outside
 document.addEventListener("click", function (event) {
@@ -51,20 +48,15 @@ document.addEventListener("click", function (event) {
   }
 });
 
-
-
 innerMobileShareIcon.addEventListener("click", function () {
   if (isMobileDevice()) {
     mobileShareBox.style.display =
       mobileShareBox.style.display === "flex" ? "none" : "flex";
     metaShareContent.style.display = "flex";
   } else {
-
-      mobileShareBox.style.display = "none";
-      
+    mobileShareBox.style.display = "none";
   }
 });
-
 
 // Dynamic Social Shares
 
@@ -98,9 +90,7 @@ shareBoxBtn.addEventListener("click", function () {
 
   this.setAttribute("aria-expanded", !isExpanded);
   socialIconsBox.setAttribute("aria-hidden", isExpanded ? "true" : "false");
-  
 });
-
 
 // Allowing Enter key and Space to Toggle the Share icons
 
@@ -109,4 +99,4 @@ mainShareIcon.addEventListener("keydown", function (event) {
     event.preventDefault(); // Prevent scrolling on Space key
     this.click(); // Triggering clicking event
   }
-})
+});

@@ -1,0 +1,95 @@
+@use "./variables"as vars;
+@use "./typography"as typo;
+
+:root {
+
+  @media (max-width: 768px) {
+
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+}
+
+body {
+
+  @media (max-width: 768px) {}
+}
+
+
+.success__container {
+  // max-width: 800px;
+  max-width: 350px;
+  background-color: vars.$white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 2rem;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    position: relative;
+    max-width: 100%;
+
+
+  }
+
+
+  & .success__title {
+    color: vars.$charcoal-grey;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      max-width: 350px;
+
+    }
+
+    & h2 {
+      margin: 0;
+    }
+  }
+
+  & .success__description {
+    font-size: 0.9rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      max-width: 100%;
+
+
+    }
+
+    & .success__email {
+      font-weight: 900;
+    }
+  }
+
+  & .success__btn button {
+    border: none;
+    background-color: vars.$dark-slate-grey;
+    color: vars.$white;
+    width: 100%;
+    padding: 1rem;
+    font-family: typo.$font-family;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+
+    @media (max-width: 768px) {
+     position: relative;
+     bottom: -10rem;
+
+
+
+    }
+
+  }
+
+  & .success__btn button:hover{
+    cursor: pointer;
+    background-color: vars.$tomato;
+    box-shadow: 0px 10px 30px vars.$tomato;
+  }
+}
